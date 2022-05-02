@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>你好，GitHub</title>
-  </head>
-  <body>
-    <h1>覺得厲害</h1>
-  </body>
+<head>
+<style>
+    
+        .button {
+            background-color: Transparent;
+            border: none;
+            color: #1a2981;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+        
+        .bg img {
+            min-height: 100%;
+            min-width: 1000px;
+            width: 100%;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            img.bg {
+                left: 50%;
+                margin-left: -500px;
+            }
+        }
+        
+        .heighttext{
+           height:30px
+        }
+</style>
+</head>
+<body>
+<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>-->
+<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>-->
+<!--<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />-->
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" src="./moment.min.js"></script>
+<script type="text/javascript" src="./daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="daterangepicker.css" />
+
+<script>
+$(function() {
+  $('input[name="thp"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+	autoApply: true,
+    minDate: "04/01/2022",
+    maxDate: "08/31/2022"
+  }, function(start, end, label) {
+    var yyyymmdd = start.format('YYYYMMDD');
+    document.getElementById("dirlog").href = "./datalog/" + yyyymmdd + "_radar.html" ;
+  });
+});
+</script>
+
+
+
+<font size="5">Date</font> <input class="heighttext" type="text" name="thp" size="10"/><br>
+<a id="dirlog" href="" target="bottom"><input type="button" value="RADAR" name="按鈕名稱" style="width:150px;height:50px;"></a>
+
+
+
+</body>
 </html>
