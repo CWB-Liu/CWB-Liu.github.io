@@ -69,12 +69,11 @@ $(function() {
   $('input[name="thp"]').daterangepicker({
     singleDatePicker: true,
     showDropdowns: true,
-    opens:"center",
         autoApply: true,
     minDate: "04/01/2022",
     maxDate: "08/31/2022",
     locale: {
-      format: '      YYYY/MM/DD'
+      format: '        YYYY/MM/DD'
     }
   }, function(start, end, label) {
     var yyyymmdd = start.format('YYYYMMDD');
