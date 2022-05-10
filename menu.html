@@ -85,6 +85,7 @@ $(function() {
         document.getElementById("nwp").href = "./logdata/" + yyyymmdd + "_nwp.html" ;
         document.getElementById("windpro").href = "./logdata/" + yyyymmdd + "_windpro.html" ;
         document.getElementById("sat").href = "./logdata/" + yyyymmdd + "_sat.html" ;
+        document.getElementById("check").href = "./logdata/" + ymd + "_late.html" ;
   });
 });
 
@@ -109,12 +110,13 @@ function defaultpage(){
 	document.getElementById("nwp").href = "./logdata/" + ymd + "_nwp.html" ;
 	document.getElementById("windpro").href = "./logdata/" + ymd + "_windpro.html" ;
 	document.getElementById("sat").href = "./logdata/" + ymd + "_sat.html" ;
+        document.getElementById("check").href = "./logdata/" + ymd + "_late.html" ;
 };
 window.onload=defaultpage;
 
 function chgcolor1() {
         document.getElementById("on1").style.color = "yellow"
-		var ids=["on2","on3","on4","on5","on6","on7","on8"];
+		var ids=["on2","on3","on4","on5","on6","on7","on8","on9"];
 		for (let x in ids) {
               document.getElementById(ids[x]).style.color = "white"
 		};
@@ -122,7 +124,7 @@ function chgcolor1() {
 	
 function chgcolor2() {
         document.getElementById("on2").style.color = "yellow"
-		var ids=["on1","on3","on4","on5","on6","on7","on8"];
+		var ids=["on1","on3","on4","on5","on6","on7","on8","on9"];
 		for (let x in ids) {
               document.getElementById(ids[x]).style.color = "white"
 		};
@@ -130,7 +132,7 @@ function chgcolor2() {
 
 function chgcolor3() {
         document.getElementById("on3").style.color = "yellow"
-		var ids=["on1","on2","on4","on5","on6","on7","on8"];
+		var ids=["on1","on2","on4","on5","on6","on7","on8","on9"];
 		for (let x in ids) {
               document.getElementById(ids[x]).style.color = "white"
 		};
@@ -138,7 +140,7 @@ function chgcolor3() {
 
 function chgcolor4() {
         document.getElementById("on4").style.color = "yellow"
-		var ids=["on1","on2","on3","on5","on6","on7","on8"];
+		var ids=["on1","on2","on3","on5","on6","on7","on8","on9"];
 		for (let x in ids) {
               document.getElementById(ids[x]).style.color = "white"
 		};
@@ -146,7 +148,7 @@ function chgcolor4() {
 	
 function chgcolor5() {
         document.getElementById("on5").style.color = "yellow"
-		var ids=["on1","on2","on3","on4","on6","on7","on8"];
+		var ids=["on1","on2","on3","on4","on6","on7","on8","on9"];
 		for (let x in ids) {
               document.getElementById(ids[x]).style.color = "white"
 		};
@@ -154,7 +156,7 @@ function chgcolor5() {
 	
 function chgcolor6() {
         document.getElementById("on6").style.color = "yellow"
-		var ids=["on1","on2","on3","on4","on5","on7","on8"];
+		var ids=["on1","on2","on3","on4","on5","on7","on8","on9"];
 		for (let x in ids) {
               document.getElementById(ids[x]).style.color = "white"
 		};
@@ -162,7 +164,7 @@ function chgcolor6() {
 
 function chgcolor7() {
         document.getElementById("on7").style.color = "yellow"
-		var ids=["on1","on2","on3","on4","on5","on6","on8"];
+		var ids=["on1","on2","on3","on4","on5","on6","on8","on9"];
 		for (let x in ids) {
               document.getElementById(ids[x]).style.color = "white"
 		};
@@ -170,12 +172,18 @@ function chgcolor7() {
 
 function chgcolor8() {
         document.getElementById("on8").style.color = "yellow"
-		var ids=["on1","on2","on3","on4","on5","on6","on7"];
+		var ids=["on1","on2","on3","on4","on5","on6","on7","on9"];
 		for (let x in ids) {
               document.getElementById(ids[x]).style.color = "white"
 		};
     };
-
+function chgcolor9() {
+        document.getElementById("on9").style.color = "yellow"
+                var ids=["on1","on2","on3","on4","on5","on6","on7","on8"];
+                for (let x in ids) {
+              document.getElementById(ids[x]).style.color = "white"
+                };
+    };
 
 </script>
 
@@ -193,6 +201,8 @@ function chgcolor8() {
 <a id="sat" href="" target="bottom" ><input id="on5" class="fram" type="button" value="SAT" name="按鈕名稱" style="width:150px;height:50px;" onclick="chgcolor5() "></a>
 <a id="sounding" href="" target="bottom" ><input id="on6" class="fram"  type="button" value="SOUNDING" name="按鈕名稱" style="width:150px;height:50px;" onclick="chgcolor6() "></a><br><br>
 <a id="surface" href="" target="bottom" ><input id="on7" class="fram" type="button" value="SURFACE" name="按鈕名稱" style="width:150px;height:50px;" onclick="chgcolor7() "></a>
-<a id="windpro" href="" target="bottom" ><input id="on8" class="fram"  type="button" value="WINDPRO" name="按鈕名稱" style="width:150px;height:50px;" onclick="chgcolor8() "></a><br>
+<a id="windpro" href="" target="bottom" ><input id="on8" class="fram"  type="button" value="WINDPRO" name="按鈕名稱" style="width:150px;height:50px;" onclick="chgcolor8() "></a><br><br>
+<a id="check" href="" target="bottom" ><input id="on9" class="fram"  type="button" value="CHECK" name="按鈕名稱" style="width:150px;height:50px;" onclick="chgcolor9() "></a>
+<br>
 </body>
 </html>
